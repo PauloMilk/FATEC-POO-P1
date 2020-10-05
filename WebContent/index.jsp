@@ -48,7 +48,7 @@ if (aluno == null) {
 					<div class="form-group col-sm-12 col-md-4 col-4">
 						<label for="nome">Nome:</label> <input type="text" readonly
 							class="form-control-plaintext border text-center" id="nome"
-							value=<%=aluno.getNome()%>">
+							value="<%=aluno.getNome()%>">
 
 					</div>
 
