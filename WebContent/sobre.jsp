@@ -8,13 +8,12 @@
 
 if (aluno == null) {
 	aluno = new Aluno("Paulo Leite Costa", "123123123123");
-	aluno.addDisciplina(new Disciplina("Metodologia da Pesquisa Científico-Tecnológica", "TTG001"));
-	aluno.addDisciplina(new Disciplina("Inglês IV", "LIN400"));
-	aluno.addDisciplina(new Disciplina("Sistemas Operacionais II", "ISO200"));
-	aluno.addDisciplina(new Disciplina("Linguagem de Programação IV - INTERNET", "ILP512"));
-	aluno.addDisciplina(new Disciplina("Programação Orientada a Objetos", "ILP007"));
-	aluno.addDisciplina(new Disciplina("Engenharia de Software III", "IES300"));
-	aluno.addDisciplina(new Disciplina("Banco de Dados", "IBD002"));
+	aluno.addDisciplina(new Disciplina("Inglês IV", "LIN400", "descricao da ementa", 4));
+	aluno.addDisciplina(new Disciplina("Sistemas Operacionais II", "ISO200", "descricao da ementa", 4));
+	aluno.addDisciplina(new Disciplina("Linguagem de Programação IV - INTERNET", "ILP512", "descricao da ementa", 4));
+	aluno.addDisciplina(new Disciplina("Programação Orientada a Objetos", "ILP007", "descricao da ementa", 4));
+	aluno.addDisciplina(new Disciplina("Engenharia de Software III", "IES300", "descricao da ementa", 4));
+	aluno.addDisciplina(new Disciplina("Banco de Dados", "IBD002", "descricao da ementa", 4));
 	application.setAttribute("aluno", aluno);
 
 }
