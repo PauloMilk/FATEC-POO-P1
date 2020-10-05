@@ -10,10 +10,10 @@
 
 	<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 		<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-			<li class="nav-item active"><a class="nav-link" href="index.jsp">Inicio</a>
+			<li class="nav-item ${pageContext.request.requestURI.endsWith('/index.jsp') ? 'active' : ''}  "><a class="nav-link" href="index.jsp">Inicio</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="sobre.jsp">Sobre</a></li>
-			<li class="nav-item"><a class="nav-link" href="disciplinas.jsp">Minhas
+			<li class="nav-item ${pageContext.request.requestURI.endsWith('/sobre.jsp') ? 'active' : ''}"><a class="nav-link" href="sobre.jsp">Sobre</a></li>
+			<li class="nav-item ${pageContext.request.requestURI.endsWith('/disciplinas.jsp') ? 'active' : ''}"><a class="nav-link" href="disciplinas.jsp">Minhas
 					Disciplinas</a></li>
 		</ul>
 
