@@ -35,7 +35,7 @@ if (aluno == null) {
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 
-<title>Hello, world!</title>
+<title>Inicio</title>
 </head>
 <body>
 	<%@ include file="/WEB-INF/parts/menu.jspf"%>

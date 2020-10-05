@@ -33,7 +33,7 @@ if (aluno == null) {
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 
-<title>Hello, world!</title>
+<title>Sobre</title>
 </head>
 <body>
 	<%@ include file="/WEB-INF/parts/menu.jspf"%>
@@ -58,7 +58,7 @@ if (aluno == null) {
 					</div>
 
 					<div class="form-group col-sm-12 col-md-4 col-4">
-						<label>Link do GitHub :</label> <a href="#"
+						<label>Link do GitHub :</label> <a href="https://github.com/pauloMilk" target="_blank"
 							class="form-control-plaintext border text-center">GitHub</a>
 
 					</div>

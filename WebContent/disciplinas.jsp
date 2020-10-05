@@ -8,7 +8,9 @@
 
 if (aluno == null) {
 	aluno = new Aluno("Paulo Leite Costa", "123123123123");
-	aluno.addDisciplina(new Disciplina("Inglês IV", "LIN400", "descricao da ementa", 4));
+	aluno.addDisciplina(new Disciplina("Inglês IV", "LIN400",
+	"descricao da ementa descricao da ementa descricao da ementa descricao da ementa descricao da ementa descricao da ementa descricao da ementa descricao da ementa descricao da ementa ",
+	4));
 	aluno.addDisciplina(new Disciplina("Sistemas Operacionais II", "ISO200", "descricao da ementa", 4));
 	aluno.addDisciplina(new Disciplina("Linguagem de Programação IV - INTERNET", "ILP512", "descricao da ementa", 4));
 	aluno.addDisciplina(new Disciplina("Programação Orientada a Objetos", "ILP007", "descricao da ementa", 4));
@@ -45,7 +47,7 @@ if (request.getParameter("update") != null) {
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 
-<title>Hello, world!</title>
+<title>Minhas Disciplinas</title>
 </head>
 <body>
 	<%@ include file="/WEB-INF/parts/menu.jspf"%>
@@ -73,6 +75,8 @@ if (request.getParameter("update") != null) {
 										<%=disciplina.getSigla()%>
 										-
 										<%=disciplina.getNome()%>
+										(<%=disciplina.getCiclo()%>
+										ciclo)
 									</button>
 								</h2>
 
@@ -83,6 +87,10 @@ if (request.getParameter("update") != null) {
 						<div id="collapse-disciplina-<%=count%>" class="collapse"
 							aria-labelledby="headingOne" data-parent="#disciplina-<%=count%>">
 							<div class="card-body">
+								<p>
+									Ementa:
+									<%=disciplina.getEmenta()%></p>
+
 								<form class="form-inline row" method="post">
 
 									<div class="form-group col-2 col-sm-8 col-md-2 mb-2">
