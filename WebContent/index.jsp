@@ -4,21 +4,10 @@
 <%@page import="models.Disciplina"%>
 
 <%
-	Aluno aluno = (Aluno) application.getAttribute("aluno");
-
-if (aluno == null) {
-	aluno = new Aluno("Paulo Leite Costa", "123123123123");
-	aluno.addDisciplina(
-	new Disciplina("Metodologia da Pesquisa Científico-Tecnológica", "TTG001", "descricao da ementa", 4));
-	aluno.addDisciplina(new Disciplina("Inglês IV", "LIN400", "descricao da ementa", 4));
-	aluno.addDisciplina(new Disciplina("Sistemas Operacionais II", "ISO200", "descricao da ementa", 4));
-	aluno.addDisciplina(new Disciplina("Linguagem de Programação IV - INTERNET", "ILP512", "descricao da ementa", 4));
-	aluno.addDisciplina(new Disciplina("Programação Orientada a Objetos", "ILP007", "descricao da ementa", 4));
-	aluno.addDisciplina(new Disciplina("Engenharia de Software III", "IES300", "descricao da ementa", 4));
-	aluno.addDisciplina(new Disciplina("Banco de Dados", "IBD002", "descricao da ementa", 4));
+	Aluno aluno = new Aluno("Paulo Leite Costa", "123123123123");
+	aluno.setDisciplinas(Disciplina.getList());
 	application.setAttribute("aluno", aluno);
 
-}
 %>
 
 <!doctype html>

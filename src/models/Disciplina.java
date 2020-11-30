@@ -1,6 +1,7 @@
 package models;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -52,6 +53,41 @@ public class Disciplina {
 		conn.close();
 		stmt.close();
 		return list;
+	}
+
+	public static void atualizarNota(Integer id, Double nota) throws Exception {
+		Connection conn = DBListener.getConnection();
+		PreparedStatement stmt = conn.prepareStatement("UPDATE disciplinas SET nota = ? WHERE id = ?");
+		stmt.setDouble(1, nota);
+		stmt.setInt(2, id);
+		stmt.execute();
+		conn.close();
+		stmt.close();
+		System.out.println("ATUALIZADO");
+	}
+	
+
+	public static void apagarDisciplina(Integer id) throws Exception {
+		Connection conn = DBListener.getConnection();
+		PreparedStatement stmt = conn.prepareStatement("DELETE FROM disciplinas WHERE id = ?");
+		stmt.setDouble(1, id);
+		stmt.execute();
+		conn.close();
+		stmt.close();
+		System.out.println("REMOVIDO");
+	}
+	
+	public void cadastrar()  throws Exception {
+		Connection conn = DBListener.getConnection();
+		PreparedStatement stmt = conn.prepareStatement("INSERT INTO disciplinas(nome,sigla, nota, ementa, ciclo) values(?,?,0,?,?)");
+		stmt.setString(1, this.getNome());
+		stmt.setString(2, this.getSigla());
+		stmt.setString(3, this.getEmenta());
+		stmt.setInt(4, this.ciclo);
+		stmt.execute();
+		conn.close();
+		stmt.close();
+		System.out.println("CADASTRADO");
 	}
 
 	public String getEmenta() {
